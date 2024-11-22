@@ -71,7 +71,7 @@ export const Pricing = () => {
               inverse,
               features,
             }) => (
-              <div className="p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F1]">
+              <div className="p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F1]" key={title}>
                 <h3 className="text-lg font-bold text-black/50">{title}</h3>
                 <div className="flex items-baseline gap-1 mt-[30px]">
                   <span className="text-4xl font-bold tracking-tighter leading-none">
