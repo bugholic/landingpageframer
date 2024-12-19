@@ -83,7 +83,7 @@ const TestimonialsColumn = (props: {
   >
     {props.testimonials.map(({ text, imageSrc, name, username }) => (
       <div className="card">
-        <div className="font-medium tracking-tight leading-5">{text}</div>
+        <div className="font-medium tracking-tight leading-5 my-2">{text}</div>
         <div className="flex items-center">
           <Image
             src={imageSrc}
@@ -92,7 +92,7 @@ const TestimonialsColumn = (props: {
             alt="name"
             className="h-10 w-10 rounded-full"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col mx-2">
             <div className="font-medium tracking-tight leading-5">{name}</div>
             <div className="leading-5 tracking-tight">{username}</div>
           </div>
