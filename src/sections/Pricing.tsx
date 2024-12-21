@@ -1,4 +1,6 @@
+"use client";
 import CheckIcon from "@/assets/check.svg";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
@@ -61,7 +63,7 @@ export const Pricing = () => {
           <h2 className="section-title p-2">Pricing</h2>
           <p className="section-desc mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
-            exclusive features. 
+            exclusive features.
           </p>
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
@@ -92,9 +94,20 @@ export const Pricing = () => {
                   </h3>
                   {popular && (
                     <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                      <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] bg-clip-text text-transparent">
+                      <motion.span
+                        className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] bg-clip-text text-transparent"
+                        animate={{
+                          backgroundPositionX: "100%",
+                        }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          ease: "linear",
+                          repeatType: "loop",
+                        }}
+                      >
                         Popular
-                      </span>
+                      </motion.span>
                     </div>
                   )}
                 </div>
